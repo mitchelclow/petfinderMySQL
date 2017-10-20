@@ -51,7 +51,7 @@ module.exports = function(app) {
 
   // Loading dashboard.html which is letting users know they are logged in
   app.get("/dashboard", function(req, res) {
-    res.sendFile(path.join(__dirname, "./../views/dashboard.html"));
+    res.sendFile(path.join(__dirname, "./../views/adopt.html"));
   });
 
 
