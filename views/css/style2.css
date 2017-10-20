@@ -108,7 +108,12 @@ ul {
 .resHead.found-lost-pets-index-title {
   text-align: left;
 }
-
+.lost-container {
+	font-size: 18px;
+}
+.found-container {
+font-size: 18px;
+}
 li {
     float: left;
 }

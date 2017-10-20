@@ -55,32 +55,46 @@ $(document).ready(function() {
     newPostDate.text(formattedDate);
 
     var newAnimalType = $("<p>");
-    newAnimalType.text("Animal Type: " + post.typeLost);
+    newAnimalType.text("Type: " + post.typeLost);
 
     var newLostAddress = $("<p>");
-    newLostAddress.text("Address Last Seen: " + post.addressLost);
+      if(post.lostAddress && post.lostAddress != '') {
+        newLostAddress.text("Address Last Seen: " + post.addressLost);
+      } else {
+        newLostAddress.text("")
+      };
 
     var newLostDate = $("<p>");
     newLostDate.text("Date Lost: " + post.dateLost);
 
+    // var newLostGender = $("<p>");
+    // newLostGender.text("Gender: " + post.genderLost);
     var newLostGender = $("<p>");
-    newLostGender.text("Gender: " + post.genderLost);
+      if (post.genderLost && post.genderLost != '') {
+        newLostGender.text("Gender: " + post.genderLost);
+      } else {
+        newLostGender.text("Gender: Unknown");
+      }
 
-    var newLostComment = $("<p>");
-    newLostComment.text("Additonal Info: " + post.commentLost);
+      var newLostComment = $("<p>");
+        if(post.foundLost && post.foundLost != '') {
+          newLostComment.text("Additional Info: " + post.foundLost);
+        } else {
+          newLostComment.text("")
+        };
 
     var newLostName = $("<p>");
     newLostName.text("Contact Name: " + post.nameLost);
 
     var newLostEmail = $("<p>");
-    newLostEmail.text("Contact Email: " + post.emailLost);
+    newLostEmail.text("Email: " + post.emailLost);
 
-    var newLostPhone = $("<p>");
-    newLostPhone.text("Contact Phone: " + post.phoneLost);
+    // var newLostPhone = $("<p>");
+    // newLostPhone.text("Phone: " + post.phoneLost);
 
     var newLostPic = $("<img>").attr({
       src: post.photoLost,
-      alt: "photo",
+      // alt: "photo",
       height: "300"
     });
     newPostTitle.append(newPostDate);
@@ -92,7 +106,7 @@ $(document).ready(function() {
     newPostPanelBody.append(newLostComment);
     newPostPanelBody.append(newLostName);
     newPostPanelBody.append(newLostEmail);
-    newPostPanelBody.append(newLostPhone);
+    // newPostPanelBody.append(newLostPhone);
     newPostPanelBody.append(newLostPic);
 
     newPostPanel.append(newPostPanelHeading);
