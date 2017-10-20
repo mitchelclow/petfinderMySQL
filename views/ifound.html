@@ -35,47 +35,47 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
-          <div class="panel-heading">I found a pet</div>
+          <div class="panel-heading">I found <span style="text-transform: lowercase">a</span> pet</div>
           <div class="panel-body">
             <form action="./api/userfounds" method="POST" class="form-horizontal found-form" enctype="multipart/form-data">
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="userName">Your Name:</label>
+                <label class="control-label col-sm-2" for="userName"><span style="color: red">*</span>Your Name:</label>
                 <div class="col-sm-10">
                   <input name="nameFound" type="text" class="form-control" id="userName" placeholder="Hero">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="emailFound">Email:</label>
+                <label class="control-label col-sm-2" for="emailFound"><span style="color: red">*</span>Email:</label>
                 <div class="col-sm-10">
-                  <input name="emailFound" type="email" class="form-control" id="emailFound" placeholder="email">
+                  <input name="emailFound" type="email" class="form-control" id="emailFound" placeholder="Email">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="phoneFound">Phone Number:</label>
+                <label class="control-label col-sm-2" for="phoneFound">Phone #:</label>
                 <div class="col-sm-10">
-                  <input name="phoneFound" type="tel" class="form-control" id="phoneFound" placeholder="phone number">
+                  <input name="phoneFound" type="tel" class="form-control" id="phoneFound" placeholder="Phone number">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="addressFound">Location Found:</label>
+                <label class="control-label col-sm-2" for="addressFound"><span style="color: red">*</span>Area Found:</label>
                 <div class="col-sm-10">
                   <input name="addressFound" type="text" class="form-control" class="addressFound" id="addressFound" placeholder="1234 example street OR corner of X and Y, ect.">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="typeFound">Type of Animal:</label>
+                <label class="control-label col-sm-2" for="typeFound"><span style="color: red">*</span>Type:</label>
                 <div class="col-sm-10">
                   <input name="typeFound" type="text" class="form-control" class="typeFound" id="typeFound" placeholder="Dog, cat, bird ect.">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="dateFound">Date Found:</label>
+                <label class="control-label col-sm-2" for="dateFound"><span style="color: red">*</span>Date Found:</label>
                 <div class="col-sm-10">
                   <input name="dateFound" type="date" class="form-control" class="dateFound" id="dateFound" placeholder="">
                 </div>
@@ -120,7 +120,6 @@
 
 
                         Photo:
-
                        </label>
 
                    <div class="col-sm-10">
@@ -128,11 +127,19 @@
                     <input name="photoFound" type="text" class="form-control" id="photoFound" placeholder="https://">
 
                   </div>
+                    <br>
+                    <br>
+                    <text style="color: red; padding-left: 20px; font-size: 14px">*Required</text>
               </div>
    <div class="form-group row">
      <div class="col-sm-offset-2 col-sm-10">
-       <button type="submit" class="btn btn-default">Submit</button>
+       <div>
+           <button type="submit" class="btn btn-default">Submit</button>
+
      </div>
+
+
+
    </div>
  </form>
 </div>
@@ -176,17 +183,17 @@ var genderFound = $("#genderFound");
 var commentFound = $("#commentFound");
 
 
-  userName.val('Tony')
-  emailFound.val('masdf@gmail.com');
-  phoneFound.val('343-343-4343');
-  addressFound.val('1234 street');
-  typeFound.val('cat');
-  dateFound.val('2017-04-19');
-  $("#genderMale").prop("checked", true);
-  commentFound.val('');
-  };
-
-  dev();
+  // userName.val('Tony')
+  // emailFound.val('masdf@gmail.com');
+  // phoneFound.val('343-343-4343');
+  // addressFound.val('1234 street');
+  // typeFound.val('cat');
+  // dateFound.val('2017-04-19');
+  // $("#genderMale").prop("checked", true);
+  // commentFound.val('');
+  // };
+  //
+  // dev();
   </script>
 </body>
 

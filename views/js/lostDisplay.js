@@ -78,7 +78,7 @@ $(document).ready(function() {
     var newLostPhone = $("<p>");
     newLostPhone.text("Contact Phone: " + post.phoneLost);
 
-    var newFoundPic = $("<img>").attr({
+    var newLostPic = $("<img>").attr({
       src: post.photoLost,
       alt: "photo",
       height: "300"
@@ -93,7 +93,7 @@ $(document).ready(function() {
     newPostPanelBody.append(newLostName);
     newPostPanelBody.append(newLostEmail);
     newPostPanelBody.append(newLostPhone);
-    newPostPanelBody.append(newLostPhoto);
+    newPostPanelBody.append(newLostPic);
 
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);

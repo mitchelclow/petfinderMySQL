@@ -40,49 +40,49 @@
             <form action="./api/userLosts" method="POST" class="form-horizontal lost-form" >
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="userName">Your Name:</label>
+                <label class="control-label col-sm-2" for="userName"><span style="color: red">*</span>Your Name:</label>
                 <div class="col-sm-10">
                   <input name ="nameLost" type="text" class="form-control" id="userName" placeholder="Hero">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="petName">Pet's Name:</label>
+                <label class="control-label col-sm-2" for="petName"><span style="color: red">*</span>Pet's Name:</label>
                 <div class="col-sm-10">
                   <input name ="petName" type="text" class="form-control" id="petName" placeholder="Lassie">
-                </div>                
+                </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="emailLost">Email:</label>
+                <label class="control-label col-sm-2" for="emailLost"><span style="color: red">*</span>Email:</label>
                 <div class="col-sm-10">
                   <input name ="emailLost" type="email" class="form-control" id="emailLost" placeholder="Email">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="phoneLost">Phone Number:</label>
+                <label class="control-label col-sm-2" for="phoneLost">Phone #:</label>
                 <div class="col-sm-10">
-                  <input name ="phoneLost" type="tel" class="form-control" id="phoneLost" placeholder="phone number">
+                  <input name ="phoneLost" type="tel" class="form-control" id="phoneLost" placeholder="Phone number">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="addressLost">Location Last Seen:</label>
+                <label class="control-label col-sm-2" for="addressLost">Area Last Seen:</label>
                 <div class="col-sm-10">
                   <input name ="addressLost" type="text" class="form-control" id="addressLost" placeholder="1234 example street OR corner of X and Y, etc.">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="typeLost">Type of Animal:</label>
+                <label class="control-label col-sm-2" for="typeLost"><span style="color: red">*</span>Type:</label>
                 <div class="col-sm-10">
                   <input name ="typeLost" type="text" class="form-control" id="typeLost" placeholder="Dog, cat, bird etc.">
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="dateLost">Date Lost:</label>
+                <label class="control-label col-sm-2" for="dateLost"><span style="color: red">*</span>Date Lost:</label>
                 <div class="col-sm-10">
                   <input name ="dateLost" type="date" class="form-control" id="dateLost" placeholder="">
                 </div>
@@ -103,28 +103,45 @@
               <div class="form-group row">
                 <label class="control-label col-sm-2" for="commentLost">Additional Info:</label>
                 <div class="col-sm-10">
-                  <textarea name="commentLost" class="form-control" rows="3" id="commentLost"></textarea>
+                  <textarea name="commentLost" class="form-control" rows="3" id="commentLost" placeholder="Add any additional information about the pet here."></textarea>
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="control-label col-sm-2" for="photoLost">Photo (limit to 350x350):</label>
-                <div class="col-sm-10">
-                  <input name="photoLost" type="file" class="form-control-file" id="photoLost" placeholder="URL">
-                </div>
-              </div>
+                        <label class="control-label col-sm-2" for="photoLost">
 
-              <div class="form-group row">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!-- close panel body -->
-        </div>
-        <!--close panel  -->
+
+                         <div class="tooltip">&#128712;
+
+                           <span class="tooltiptext">Paste an image link of the pet here. We recommend using <a href="https://imgur.com/">www.imgur.com</a>, a website that allows you to upload without a login. To do so, click on the new post button, then browse. Select your image, and when it's done uploading, right click and select "copy image address."</span>
+
+                          </div>
+
+
+                         Photo:
+                        </label>
+
+                    <div class="col-sm-10">
+
+                     <input name="photoLost" type="text" class="form-control" id="photoLost" placeholder="https://">
+
+                   </div>
+                     <br>
+                     <br>
+                     <text style="color: red; padding-left: 20px; font-size: 14px">*Required</text>
+               </div>
+    <div class="form-group row">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div>
+            <button type="submit" class="btn btn-default">Submit</button>
+
       </div>
+
+
+
+    </div>
+  </form>
+ </div>
       <!-- close col -->
     </div>
       <!-- close row -->
