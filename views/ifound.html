@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title class="title">Lost Pet Finder</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="./css/style2.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <ul>
+    <div class="navText">
+      <li><a class="active" href="index.html">🐾</a></li>
+      <li><a class="active orangeHead" href="ifound.html">I Found a Pet</a></li>
+      <li><a class="active" href="ilost.html">I Lost a Pet</a></li>
+      <li><a class="active" href="foundDisplay.html">Found Pets List</a></li>
+      <li><a class="active" href="lostDisplay.html">Lost Pets List</a></li>
+      <li><a class="active" href="adopt.html">Adopt-a-Pet</a></li>
+      <li><a class="active" href="contact.html">About/FAQ/Contact</a></li>
+    </div>
+  </ul>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+          <div class="panel-heading">I found a pet</div>
+          <div class="panel-body">
+            <form action="./api/userfounds" method="POST" class="form-horizontal found-form" enctype="multipart/form-data">
+
+              <div class="form-group row">
+                <label class="control-label col-sm-2" for="userName">Your Name:</label>
+                <div class="col-sm-10">
+                  <input name="nameFound" type="text" class="form-control" id="userName" placeholder="Hero">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="control-label col-sm-2" for="emailFound">Email:</label>
+                <div class="col-sm-10">
+                  <input name="emailFound" type="email" class="form-control" id="emailFound" placeholder="email">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="control-label col-sm-2" for="phoneFound">Phone Number:</label>
+                <div class="col-sm-10">
+                  <input name="phoneFound" type="tel" class="form-control" id="phoneFound" placeholder="phone number">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="control-label col-sm-2" for="addressFound">Location Found:</label>
+                <div class="col-sm-10">
+                  <input name="addressFound" type="text" class="form-control" class="addressFound" id="addressFound" placeholder="1234 example street OR corner of X and Y, ect.">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="control-label col-sm-2" for="typeFound">Type of Animal:</label>
+                <div class="col-sm-10">
+                  <input name="typeFound" type="text" class="form-control" class="typeFound" id="typeFound" placeholder="Dog, cat, bird ect.">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="control-label col-sm-2" for="dateFound">Date Found:</label>
+                <div class="col-sm-10">
+                  <input name="dateFound" type="date" class="form-control" class="dateFound" id="dateFound" placeholder="">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="control-label col-sm-2" for="genderFound">Gender:</label>
+                <div class="col-sm-10">
+                  <label class="radio-inline">
+                    <input id="genderMale" type="radio" name="genderFound" value="Male">Male
+                  </label>
+                  <label class="radio-inline">
+                    <input id="genderFemale" type="radio" name="genderFound" value="Female">Female
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="control-label col-sm-2" for="commentFound">Additional Info:</label>
+                <div class="col-sm-10">
+                  <textarea name="commentFound" class="form-control" rows="3" id="commentFound" placeholder="Add any additional information about the pet here."></textarea>
+                </div>
+              </div>
+
+            <div class="form-group row">
+                       <label class="control-label col-sm-2" for="photoFound">
+                        
+
+                        <div class="tooltip">&#128712;
+                        
+                          <span class="tooltiptext">Paste an image link of the pet here. We recommend using <a href="https://imgur.com/">www.imgur.com</a>, a website that allows you to upload without a login. To do so, click on the new post button, then browse. Select your image, and when it's done uploading, right click and select "copy image address."</span>
+
+                         </div>
+
+
+                        Photo: 
+                      
+                       </label>
+
+                   <div class="col-sm-10">
+
+                    <input name="photoFound" type="text" class="form-control" id="photoFound" placeholder="https://">
+                     
+                  </div>
+              </div>
+   <div class="form-group row">
+     <div class="col-sm-offset-2 col-sm-10">
+       <button type="submit" class="btn btn-default">Submit</button>
+     </div>
+   </div>
+ </form>
+</div>
+
+          <!-- close panel body -->
+        </div>
+        <!--close panel  -->
+      </div>
+      <!-- close col -->
+    </div>
+      <!-- close row -->
+</div>
+<!-- container -->
+
+<style media="screen">
+  .panel {
+    margin-top: 40px;
+  }
+
+body {
+ background: url('https://images.unsplash.com/photo-1446292532430-3e76f6ab6444?dpr=1&auto=compress,format&fit=crop&w=2004&h=&q=80&cs=tinysrgb&crop=') no-repeat center center fixed;
+ background-size: cover;
+}
+</style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <script src="js/ifound.js" type="text/javascript"></script> -->
+
+<script>
+function dev()
+{
+var foundForm = $(".found-form");
+var userName = $("#userName");
+var emailFound = $("#emailFound");
+var phoneFound = $("#phoneFound");
+var addressFound = $("#addressFound");
+var typeFound = $("#typeFound");
+var dateFound = $("#dateFound");
+var genderFound = $("#genderFound");
+var commentFound = $("#commentFound");
+
+
+  // userName.val('Tony')
+  // emailFound.val('masdf@gmail.com');
+  // phoneFound.val('343-343-4343');
+  // addressFound.val('1234 street');
+  // typeFound.val('cat');
+  // dateFound.val('2017-04-19');
+  // $("#genderMale").prop("checked", true);
+  // commentFound.val('');
+  };
+
+  dev();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{
+  "name": "thepetfinder",
+  "version": "1.0.0",
+  "description": "Reunites pets with their owners.",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "express-fileupload": "^0.1.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "moment": "^2.18.1",
+    "mysql2": "^1.4.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "sequelize": "^4.14.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-runtime": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitchelclow/thepetfinder.git"
+  },
+  "author": "Mitchel Clow, Amy Volkert, Sally Bradfield",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitchelclow/thepetfinder/issues"
+  },
+  "homepage": "https://github.com/mitchelclow/thepetfinder#readme"
+}
