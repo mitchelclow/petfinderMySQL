@@ -33,76 +33,78 @@ $(document).ready(function() {
 
   // This function constructs a post's HTML
   function createNewRow(post) {
-    var newPostPanel = $("<div>");
-    newPostPanel.addClass("panel panel-default");
-    var newPostPanelHeading = $("<div>");
-    newPostPanelHeading.addClass("panel-heading");
-    var newPostTitle = $("<h2>");
-    var newPostDate = $("<small>");
-    newPostDate.css({
-      float: "right",
-      "font-weight": "700",
-      "margin-top": "-15px"
-    });
+        var newPostPanel = $("<div>");
+        newPostPanel.addClass("panel panel-default");
+        var newPostPanelHeading = $("<div>");
+        newPostPanelHeading.addClass("panel-heading");
+        var newPostTitle = $("<h2>");
+        var newPostDate = $("<small>");
+        newPostDate.css({
+          float: "right",
+          "font-weight": "700",
+          "margin-top": "-15px"
+        });
 
-    var newPostPanelBody = $("<div>");
-    newPostPanelBody.addClass("panel-body");
+        var newPostPanelBody = $("<div>");
+        newPostPanelBody.addClass("panel-body");
 
-    newPostTitle.text(post.typeFound);
+        newPostTitle.text(post.typeFound);
 
-    var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm A");
-    newPostDate.text(formattedDate);
+        var formattedDate = new Date(post.createdAt);
+        formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm A");
+        newPostDate.text(formattedDate);
 
 
-    var newFoundAddress = $("<p>");
-    newFoundAddress.text("Location Found: " + post.addressFound);
+        var newFoundAddress = $("<p>");
+        newFoundAddress.text("Location Found: " + post.addressFound);
 
-    var newFoundDate = $("<p>");
-    newFoundDate.text("Date Found: " + post.dateFound);
+        var newFoundDate = $("<p>");
+        newFoundDate.text("Date Found: " + post.dateFound);
 
-    // WORKING ON
-    var newFoundGender = $("<p>");
-      if (post.genderFound && post.genderFound != '') {
-        newFoundGender.text("Gender: " + post.genderFound);
-      } else {
-        newFoundGender.text("Gender: Unknown");
-      }
-      // if (newFoundGender == null) {
-      //   newFoundGender.text("Gender: Unknown");// your code here.
-      //   };
-      // END WORKING ON - see append below
+        // WORKING ON
+        var newFoundGender = $("<p>");
+          if (post.genderFound && post.genderFound != '') {
+            newFoundGender.text("Gender: " + post.genderFound);
+          } else {
+            newFoundGender.text("Gender: Unknown");
+          }
+          // if (newFoundGender == null) {
+          //   newFoundGender.text("Gender: Unknown");// your code here.
+          //   };
+          // END WORKING ON - see append below
 
-    var newFoundComment = $("<p>");
-    newFoundComment.text("Additonal Info: " + post.commentFound);
+        var newFoundComment = $("<p>");
+        newFoundComment.text("Additonal Info: " + post.commentFound);
 
-    var newFoundName = $("<p>");
-    newFoundName.text("Contact Name: " + post.nameFound);
+        var newFoundName = $("<p>");
+        newFoundName.text("Contact Name: " + post.nameFound);
 
-    var newFoundEmail = $("<p>");
-    newFoundEmail.text("Contact Email: " + post.emailFound);
+        var newFoundEmail = $("<p>");
+        newFoundEmail.text("Contact Email: " + post.emailFound);
 
-    var newFoundPhone = $("<p>");
-    newFoundPhone.text("Contact Phone: " + post.phoneFound);
+        var newFoundPhone = $("<p>");
+        newFoundPhone.text("Contact Phone: " + post.phoneFound);
 
-    var newFoundPic = $("<div>");
-    newFoundPic.text(post.photoFound);
+        var newFoundPic = $("<img>").attr({
+          src: post.photoFound,
+          alt: "photo",
+          height: "300"
+        });
 
-    newPostTitle.append(newPostDate);
-    newPostPanelHeading.append(newPostTitle);
-    newPostPanelBody.append(newFoundAddress);
-    newPostPanelBody.append(newFoundDate);
-    newPostPanelBody.append(newFoundGender);
-    newPostPanelBody.append(newFoundComment);
-    newPostPanelBody.append(newFoundName);
-    newPostPanelBody.append(newFoundEmail);
-    newPostPanelBody.append(newFoundPhone);
-    newPostPanelBody.append(newFoundPic);
-
-    newPostPanel.append(newPostPanelHeading);
-    newPostPanel.append(newPostPanelBody);
-    newPostPanel.data("post", post);
-    return newPostPanel;
+        newPostTitle.append(newPostDate);
+        newPostPanelHeading.append(newPostTitle);
+        newPostPanelBody.append(newFoundAddress);
+        newPostPanelBody.append(newFoundDate);
+        newPostPanelBody.append(newFoundGender);
+        newPostPanelBody.append(newFoundComment);
+        newPostPanelBody.append(newFoundName);
+        newPostPanelBody.append(newFoundEmail);
+        newPostPanelBody.append(newFoundPhone);
+        newPostPanelBody.append(newFoundPic);
+        newPostPanel.append(newPostPanelHeading);
+        newPostPanel.append(newPostPanelBody);
+        newPostPanel.data("post", post);
+        return newPostPanel;
   }
   //
   // // This function displays a message when there are no posts
