@@ -78,9 +78,11 @@ $(document).ready(function() {
     var newLostPhone = $("<p>");
     newLostPhone.text("Contact Phone: " + post.phoneLost);
 
-    var newLostPhoto = $("<div>");
-    newLostPhoto.text(post.photoLost);
-
+    var newFoundPic = $("<img>").attr({
+      src: post.photoLost,
+      alt: "photo",
+      height: "300"
+    });
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(newPostTitle);
     newPostPanelBody.append(newAnimalType);
