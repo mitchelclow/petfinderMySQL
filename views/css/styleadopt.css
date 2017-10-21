@@ -1,6 +1,14 @@
 body
 {
 }
+.please-register {
+	text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: white!important;
+	font-style: italic;
+  font-size: 50px;
+  text-shadow: 1px 1px orange
+}
 
 .resHead
 {
@@ -10,7 +18,10 @@ body
   font-size: 75px;
   text-shadow: 1px 1px orange;
 }
-
+.identifier {
+	font-style: italic;
+	
+}
 .resText
 {
 	text-align: center;
