@@ -1,24 +1,23 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "thepetfinder_db",
-    "host": "127.0.0.1",
+    "username": "amyvolkert",
+    "password": "Ar7wrf5cplln",
+    "database": "amyvolkert",
+    "host": "codeflink.net",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "",
-    "database": "db_test",
-    "host": "127.0.0.1",
+    "username": "amyvolkert",
+    "password": "Ar7wrf5cplln",
+    "database": "amyvolkert",
+    "host": "codeflink.net",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "",
-    "database": "db_production",
-    "host": "127.0.0.1",
-    "use_env_variable": "JAWSDB_URL",
+    "username": "amyvolkert",
+    "password": "Ar7wrf5cplln",
+    "database": "amyvolkert",
+    "host": "codeflink.net",
     "dialect": "mysql"
   }
 }
