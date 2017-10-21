@@ -77,8 +77,8 @@ $(document).ready(function() {
       }
 
       var newLostComment = $("<p>");
-        if(post.foundLost && post.foundLost != '') {
-          newLostComment.text("Additional Info: " + post.foundLost);
+        if(post.commentLost && post.commentLost != '') {
+          newLostComment.text("Additional Info: " + post.commentLost);
         } else {
           newLostComment.text("")
         };

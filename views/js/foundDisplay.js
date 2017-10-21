@@ -69,21 +69,13 @@ $(document).ready(function() {
             newFoundGender.text("Gender: Unknown");
           }
 
-
-          var newFoundGender = $("<p>");
-            if (post.genderFound && post.genderFound != '') {
-              newFoundGender.text("Gender: " + post.genderFound);
-            } else {
-              newFoundGender.text("Gender: Unknown");
-            }
-
         var newFoundComment = $("<p>");
-          if(post.foundComment && post.foundComment != '') {
-            newFoundComment.text("Additional Info: " + post.foundComment);
+          if(post.commentFound && post.commentFound != '') {
+            newFoundComment.text("Additional Info: " + post.commentFound);
           } else {
-            newFoundComment.text("")
-          };
-        
+            newFoundComment.text("");
+          }
+
         var newFoundName = $("<p>");
         newFoundName.text("Name: " + post.nameFound);
 
