@@ -88,7 +88,9 @@ $(document).ready(function() {
         var newFoundPic = $("<img>").attr({
           src: post.photoFound,
           alt: "photo",
-          height: "300"
+          maxheight: "300",
+          maxwidth: "300"
+
         });
 
         newPostTitle.append(newPostDate);
