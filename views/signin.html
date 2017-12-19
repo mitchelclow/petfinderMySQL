@@ -1,19 +1,357 @@
+<!-- The page template -->
+
 <!-- <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Pet Finder</title> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+<!-- </head>
+<body> -->
+  <!-- LostPet component placeholder - Step 3-->
+  <!-- <div id="lostpet-wrapper"></div> -->
+  <!-- All of our JS code will be transpiled into this bundle.js file -->
+  <!-- /app/ is the public path specied in webpack.congig.js -->
+	<!-- <script src="/app/bundle.js"></script> -->
+<!-- </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title></title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title class="title">Adopt-a-Pet — Pet Finder</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="./css/styleadopt.css" rel="stylesheet">
 </head>
 
 <body>
-    <form id="signin" name="signin" method="post" action="signin">
-        <label for="email">Email</label>
-        <input class="text" name="email" type="email" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign In" />
-    </form>
+
+  <ul>
+
+    <div class="navText">
+      <li><a class="active" href="index.html">🐾</a></li>
+      <li><a class="active" href="ifound.html">I Found a Pet</a></li>
+      <li><a class="active" href="ilost.html">I Lost a Pet</a></li>
+      <li><a class="active" href="foundDisplay.html">Found Pets List</a></li>
+      <li><a class="active" href="lostDisplay.html">Lost Pets List</a></li>
+      <li><a class="active orangeHead" href="adopt.html">Adopt-a-Pet</a></li>
+      <li><a class="active" href="contact.html">About/FAQ/Contact</a></li>
+    </div>
+
+
+    <div class="login-buttons">
+
+      <!-- Trigger/Open the Modals -->
+      <button class="registerBtn" id="registerBtn">Register</button>
+      <button id="loginBtn">Login</button>
+
+      <!-- The Register Modal -->
+      <div id="myModalTwo" class="modal">
+
+        <!-- Login Modal content -->
+        <div class="modal-content">
+          <div class="modal-header" align="center">
+            <img id="img_logo" src="https://i.imgur.com/iMF2ErO.png">
+            <!-- <img class="pawLogo" src=""></img> -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div id="div-login-msg">
+              <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+              <span id="text-login-msg typeEmail">Type your email and password.</span>
+          </div>
+
+          <form id="signup" name="signup" method="post" action="/signup">
+              <div class="registerFields">
+                  <div class="emailEnter">
+                    <label class="emailWord" for="email">Email</label>
+                    <input class="text" name="email" type="email" />
+                  </div>
+
+                  <div class="firstEnter">
+                    <label class="firstWord" for="firstname">Firstname</label>
+                    <input name="firstname" type="text" />
+                  </div>
+
+                  <div class="lastEnter">
+                    <label class="lastWord" for="lastname">Lastname</label>
+                    <input name="lastname" type="text" />
+                  </div>
+
+                  <div class="passEnter">
+                    <label class="passWord" for="password">Password</label>
+                    <input name="password" type="password" />
+                  </div>
+
+                  <input class="btn" type="submit" value="Sign Up" />
+              </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- The Login Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Login Modal content -->
+        <div class="modal-content">
+          <div class="modal-header" align="center">
+            <img id="img_logo" src="images/paw.png">
+            <!-- <img class="pawLogo" src=""></img> -->
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div id="div-login-msg">
+              <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+              <span id="text-login-msg typeEmail">Type your email and password.</span>
+          </div>
+
+          <form id="signin" name="signin" method="post" action="signin">
+              <label for="email">Email</label>
+              <input class="form-control" name="email" type="email" />
+              <label for="password">Password</label>
+              <input class="form-control" name="password" type="password" />
+              <!-- <input class="btn" type="submit" value="Sign In" /> -->
+              <div class="modal-footer">
+                  <div>
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                  </div>
+                  <div>
+                      <!-- <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button> -->
+
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+<!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" align="center">
+          <img id="img_logo" src="https://i.imgur.com/iMF2ErO.png">
+          <!-- <img class="pawLogo" src=""></img> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+        </div>
+
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                    <div class="modal-body">
+                <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Type your email and password.</span>
+                            </div>
+                <input id="login_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                  </div>
+                <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                            </div>
+                  <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                            </div>
+                </div>
+                  <!-- End # Login Form -->
+                  </form>
+
+      </div>
+    </div>
+  </div>
+    <!-- END # MODAL LOGIN -->
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+  </ul>
+
+
+
+  <!-- Adopt-a-Pet -->
+  <div class="container">
+      <div class="adoptContainer">
+        <!-- First row, one column-->
+        <div class="row dogPicture">
+          <div class="col-md-12">
+            <div class="please-register">Please register</div>
+            <div class="adoptText resHead">Adopt-a-Pet</div>
+            <div class=info>
+              <p><i>Friends of Animals</i> (“Friends”) rescues abandoned pets in high-kill shelters throughout Colorado, Texas, and New Mexico, giving a voice to abandoned, abused, and overlooked animals. Through our partnership with Friends, we are able to offer the following animals for adoption. If you are interested in a pet, create a login with us and use the form below.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second row -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aboutDescrip">
+              <div class="row">
+                  <div class="col-md-4">
+                    <div class="adoptPhoto beagle"><img src="./images/bloodhound.png" alt="beagle" ></img></div>
+                    <div class="adoptInfo">
+                      <div class="petName">Name: Georgie</div>
+                      <div>Age: 6 months</div>
+                      <div>Gender: Male</div>
+                      <div>Breed: Beagle</div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="adoptPhoto"><img src="./images/greyCatAdopt.png" alt="tabby"></img></div>
+                    <div class="adoptInfo">
+                      <div class="petName">Name: Macy</div>
+                      <div>Age: 2</div>
+                      <div>Gender: Female</div>
+                      <div>Breed: Tabby</div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="adoptPhoto"><img src="./images/golden.png" alt="golden"></img></div>
+                    <div class="adoptInfo">
+                      <div class="petName">Name: Scout</div>
+                      <div>Age: 3</div>
+                      <div>Gender: Male</div>
+                      <div>Breed: Golden Retriever</div>
+                    </div>
+                  </div>
+
+
+
+              </div>
+
+              <br>
+
+
+              <div class="row">
+                  <div class="col-md-4">
+                    <div class="adoptPhoto"><img src="./images/pug.png" alt="pug" ></img></div>
+                    <div class="adoptInfo">
+                      <div class="petName">Name: Doug</div>
+                      <div>Age: 6</div>
+                      <div>Gender: Female</div>
+                      <div>Breed: Pug</div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="adoptPhoto"><img src="./images/bird.png" alt="tabby"></img></div>
+                    <div class="adoptInfo">
+                      <div class="petName">Name: Rascal</div>
+                      <div>Age: 9</div>
+                      <div>Gender: Male</div>
+                      <div>Breed:  Cockatiel</div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="adoptPhoto"><img src="./images/iguana.png" alt="iguana"></img></div>
+                    <div class="adoptInfo">
+                      <div class="petName">Name: Lana</div>
+                      <div>Age: 2</div>
+                      <div>Gender: Female</div>
+                      <div>Breed:  Iguana</div>
+                    </div>
+                  </div>
+
+              </div>
+
+            <!-- End first row -->
+            </div>
+          </div>
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">Adoption Inquiry</div>
+                <div class="panel-body">
+                  <form class="form-horizontal">
+                    <div class="form-group row">
+                      <label class="control-label col-sm-2" for="petinterest">Pet Name:</label>
+                      <div class="col-sm-10">
+                        <input type="email" class="form-control" placeholder="Fluffy">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="control-label col-sm-2" for="comment">Message:</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" rows="3" id="commentFound"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+</div>
 
 </body>
 
-</html> -->
+
+<style media="screen">
+  .panel {
+    margin-top: 40px;
+  }
+
+  body {
+ background: url('./images/cork.jpg')
+}
+</style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- <script src="js/adoptlogin.js"></script> -->
+  <script src="js/newadoptmodal.js"></script>
+</html>

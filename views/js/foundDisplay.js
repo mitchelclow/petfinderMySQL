@@ -56,41 +56,46 @@ $(document).ready(function() {
 
 
         var newFoundAddress = $("<p>");
-        newFoundAddress.text("Location Found: " + post.addressFound);
+        newFoundAddress.text("Area Found: " + post.addressFound);
 
         var newFoundDate = $("<p>");
         newFoundDate.text("Date Found: " + post.dateFound);
 
-        // WORKING ON
+
         var newFoundGender = $("<p>");
           if (post.genderFound && post.genderFound != '') {
             newFoundGender.text("Gender: " + post.genderFound);
           } else {
             newFoundGender.text("Gender: Unknown");
           }
-          // if (newFoundGender == null) {
-          //   newFoundGender.text("Gender: Unknown");// your code here.
-          //   };
-          // END WORKING ON - see append below
 
         var newFoundComment = $("<p>");
-        newFoundComment.text("Additonal Info: " + post.commentFound);
+          if(post.commentFound && post.commentFound != '') {
+            newFoundComment.text("Additional Info: " + post.commentFound);
+          } else {
+            newFoundComment.text("");
+          }
 
         var newFoundName = $("<p>");
-        newFoundName.text("Contact Name: " + post.nameFound);
+        newFoundName.text("Name: " + post.nameFound);
 
         var newFoundEmail = $("<p>");
-        newFoundEmail.text("Contact Email: " + post.emailFound);
+        newFoundEmail.text("Email: " + post.emailFound);
 
-        var newFoundPhone = $("<p>");
-        newFoundPhone.text("Contact Phone: " + post.phoneFound);
+        // var newFoundPhone = $("<p>");
+        // newFoundPhone.text("Phone: " + post.phoneFound);
 
         var newFoundPic = $("<img>").attr({
           src: post.photoFound,
+<<<<<<< HEAD
           alt: "photo",
           maxheight: "300",
           maxwidth: "300"
 
+=======
+          // alt: "photo",
+          height: "300"
+>>>>>>> 08fb8b83711e90c4d41dd44238fffbc00d3f7dd0
         });
 
         newPostTitle.append(newPostDate);
@@ -101,7 +106,7 @@ $(document).ready(function() {
         newPostPanelBody.append(newFoundComment);
         newPostPanelBody.append(newFoundName);
         newPostPanelBody.append(newFoundEmail);
-        newPostPanelBody.append(newFoundPhone);
+        // newPostPanelBody.append(newFoundPhone);
         newPostPanelBody.append(newFoundPic);
         newPostPanel.append(newPostPanelHeading);
         newPostPanel.append(newPostPanelBody);

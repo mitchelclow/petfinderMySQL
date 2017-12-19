@@ -30,10 +30,6 @@ var UserLost = sequelize.define("UserLost", {
   },
   addressLost: {
     type: DataTypes.STRING,
-    allowNull: false,
-      validate: {
-        len: [1]
-      }
   },
   typeLost: {
     type: DataTypes.STRING,
