@@ -87,17 +87,9 @@ $(document).ready(function() {
 
         var newFoundPic = $("<img>").attr({
           src: post.photoFound,
-<<<<<<< HEAD
-          alt: "photo",
-          maxheight: "300",
-          maxwidth: "300"
-
-=======
           // alt: "photo",
-          height: "300"
->>>>>>> 08fb8b83711e90c4d41dd44238fffbc00d3f7dd0
+          height: "300",
         });
-
         newPostTitle.append(newPostDate);
         newPostPanelHeading.append(newPostTitle);
         newPostPanelBody.append(newFoundAddress);
